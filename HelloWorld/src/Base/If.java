@@ -35,9 +35,18 @@ public class If {
 		Scanner s = new Scanner(System.in);
 		String name = s.nextLine();
 		
-		if(name.equals("JHW")) {
-			System.out.println("Jang Hyowon");
+		if(name.equals("a") || name.equals("A")) {
+			System.out.println("Apple");
+		} else if(name.equals("b") || name.equals("B")) {
+			System.out.println("Banana");
+		} else if(name.equals("w") || name.equals("W")) {
+			System.out.println("Watermelon");
+		} else if(name.equals("s") || name.equals("S")) {
+			System.out.println("Strawberry");
+		} else {
+			System.out.println("모르는 이니셜");	
 		}
+		System.out.println("프로그램 종료");
 		s.close();
 	}
 

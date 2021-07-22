@@ -17,7 +17,6 @@ public class ScannerPr {
 		//float f = Double.parseDouble(str);
 		
 		System.out.println("Hello "+str+"!!!");
-
+		s.close();
 	}
-
 }
