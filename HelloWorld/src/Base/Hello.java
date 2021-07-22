@@ -12,5 +12,11 @@ public class Hello {
 		int value = 5;
 		int x = value*3;
 		System.out.println(x);
+		
+		//f format
+		//d decimal
+		System.out.printf("%d\n", 10);
+		System.out.printf("%2d\n", 5);
+		System.out.printf("%02d\n", 5);
 	}
 }
