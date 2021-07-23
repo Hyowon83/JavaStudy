@@ -2,7 +2,7 @@ package Base;
 
 import java.util.Scanner;
 
-public class If {
+public class IfPr {
 
 	public static void main(String[] args) {
 //		String str = "¾È³ç";
