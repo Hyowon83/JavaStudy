@@ -20,6 +20,7 @@ public class ExampleSnake {
 //				System.out.println("홀수행" + i);
 //			}
 //		}
+		
 		final Scanner sc = new Scanner(System.in);
 		//컨트롤 + 쉬프트 + O
 		final int n = sc.nextInt();
@@ -49,19 +50,23 @@ public class ExampleSnake {
 		}
 		sc.close();
 		
-		
+//		int n = 4;
+//		int inc = 0;
+//		for(int i = 0; i < n; i++) {
 //			if (i%2==0) { //행이 짝수행일 때
 //				for (int j = 0; j < n; j++) {
 //					inc++;
 //					System.out.print(inc+" ");
-//				}				
-//			} else {
-//				inc = inc+n;
-//				for (int j = 0; j < n; j++) {
-//					System.out.print(inc+" ");
-//					inc = inc - m;
 //				}
+//				System.out.println("");
+//			} else {
+//				for (int j = n; j > 0; j--) {
+//					System.out.print(inc+j+" ");
+//				}
+//				System.out.println("");
+//				inc = inc + n;
 //			}
+//		}
 		//3면 4행 3열
 //		for () { //면
 //			for () { //행 
