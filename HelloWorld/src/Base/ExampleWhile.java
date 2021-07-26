@@ -2,7 +2,7 @@ package Base;
 
 import java.util.Scanner;
 
-public class ExampleWhile01 {
+public class ExampleWhile {
 
 	public static void main(String[] args) {
 		
