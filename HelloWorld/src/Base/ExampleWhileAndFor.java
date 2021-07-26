@@ -1,9 +1,9 @@
 package Base;
 
-public class ExampleWhile {
+public class ExampleWhileAndFor {
 
 	public static void main(String[] args) {
-		int a = 1;
+		int a = 2;
 		while(a<=9) {
 			int b = 1;
 			while(b<=9) {
@@ -13,7 +13,13 @@ public class ExampleWhile {
 			System.out.println();
 			a++;
 		}
-
+		
+		for(int n=2;n<=9;n++) {
+			for(int m=1;m<=9;m++) {
+				System.out.printf("%d x %d = %2d\n", n, m, n*m);
+			}
+			System.out.println();
+		}
+		
 	}
-
 }
