@@ -20,7 +20,7 @@ public class ExampleIf {
 		} else {
 			System.out.println("F");
 		}
-
+		s.close();
 	}
 }
 
