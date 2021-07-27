@@ -1,17 +1,17 @@
 package Base;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class PrimeNumber {
 
 	public static void main(String[] args) {
 //		final Scanner sc = new Scanner(System.in);
-//		int n = sc.nextInt();
+//		int a = sc.nextInt();
 		
 
-		for(int n = 2; n <= 100; n++) {
+		for(int n = 2; n <= 10000; n++) {
 			int flag = 1;
-			for(int m = 2; m <= n-1; m++) {
+			for(int m = 2; m < n; m++) {
 				if(n%m==0) {
 					flag = 0;
 					break;
