@@ -5,6 +5,7 @@ public class ArrayPr {
 	public static void main(String[] args) {
 		// int[] ar; // ar이라는 배열타입 변수(int ar[];)
 		// int ar; // ar이라는 정수타입 변수
+		// 길이를 선언하면 바꿀 수 없다.
 		
 		int n = 5;
 		//String str[] = new String[n];
