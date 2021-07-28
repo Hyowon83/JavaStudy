@@ -7,8 +7,10 @@ public class ArrayListPr {
 	public static void main(String[] args) {
 		//Array와 메모리구조만 다른 ArrayList
 		//길이를 모를 때 메모리의 낭비나 부족함 없이 사용할 수 있다.
+		//길이를 선언하지 않고 추가하거나 삭제로 줄일 수 있기 때문.
 		//CRUD(Create/Read/Update/Delete)
 		ArrayList<String> stdtName = new ArrayList<String>();
+		// String(문자), Integer(정수), float(실수)
 		stdtName.add("John"); //ArrayList에 인덱스 추가하는 방법. //생성
 		stdtName.add("Jane");
 		stdtName.add("James");
