@@ -3,14 +3,15 @@ package Base;
 public class Main {
 	
 	public static void main(String[] args) {
+		
 		System.out.println(Integer.MAX_VALUE);
 		System.out.println(Integer.MIN_VALUE);
 
 		//4byte int
 		// 00000000 00000000 00000000 00000000
-		// MSB ë¶€í˜¸ ë¹„íŠ¸ 0 ì–‘ìˆ˜, 1 ìŒìˆ˜
+		// MSB ºÎÈ£ ºñÆ® 0 ¾ç¼ö, 1 À½¼ö
 		
-		//overflow ì˜¤ë²„í”Œë¡œìš°
+		//overflow ¿À¹öÇÃ·Î¿ì
 		System.out.println(Integer.MAX_VALUE + 1);
 		System.out.println(Integer.MAX_VALUE + 2);
 
