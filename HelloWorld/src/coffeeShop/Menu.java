@@ -1,5 +1,11 @@
 package coffeeShop;
 
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Menu { // 선언(정의) only. not 실행코드 
@@ -7,17 +13,18 @@ public class Menu { // 선언(정의) only. not 실행코드
 	private ArrayList<Integer> alPrice;
 	
 	Menu() {
-		alName=new ArrayList<String>();
-		alPrice=new ArrayList<Integer>();
+		alName = new ArrayList<String>();
+		alPrice = new ArrayList<Integer>();
+		this.load();
 		
-		addName("Americano");
-		addName("Espresso");
-		addName("Latte");
-		addPrice(2000);
-		addPrice(2500);
-		addPrice(3000);
-		
-		showMenu();
+//		addName("Americano");
+//		addName("Espresso");
+//		addName("Latte");
+//		addPrice(2000);
+//		addPrice(2500);
+//		addPrice(3000);
+//		
+//		showMenu();
 	}
 	/* 생성자 - 일종의 메소드
 	 *         용도: 주로 초기화 작업용. 
@@ -32,9 +39,41 @@ public class Menu { // 선언(정의) only. not 실행코드
 	void addPrice(int price) {
 		this.alPrice.add(price);
 	}
+	void addPrice(String price) {
+		this.alPrice.add(Integer.parseInt(price));
+	}
 	void showMenu() {
 		for(int i=0;i<this.alName.size();i++) {
 			System.out.println(this.alName.get(i)+"\t"+this.alPrice.get(i));
 		}
+	}
+	void save() { //arrayList alName, alPrice를 화일(menu.txt)에 저장
+		
+	}
+	void load() { //화일(menu.txt)을 읽어서 arrayList alName, alPrice에 로드.
+		File file=new File("d:/menu.txt");
+		if(file.exists()) {
+			BufferedReader inFile = null;
+			try {
+				inFile = new BufferedReader(new FileReader(file));
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			String line;
+			try {
+				line = inFile.readLine();
+				while(line != null) {
+					String[] parts = line.split(",");
+					addName(parts[0]);
+					addPrice(parts[1]);
+					line = inFile.readLine();
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
 	}
 }
