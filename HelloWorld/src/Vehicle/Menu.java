@@ -2,17 +2,17 @@ package Vehicle;
 
 import java.util.ArrayList;
 
-public class Menu { //¼±¾ğ(Á¤ÀÇ) only.½ÇÇàÄÚµå´Â ¸Ş¼Òµå¸¦ ¼±¾ğÇÏ°í ±× ¾È¿¡¸¸ ÀÖ¾î¾ßÇÑ´Ù.
+public class Menu { //ì„ ì–¸(ì •ì˜) only.ì‹¤í–‰ì½”ë“œëŠ” ë©”ì†Œë“œë¥¼ ì„ ì–¸í•˜ê³  ê·¸ ì•ˆì—ë§Œ ìˆì–´ì•¼í•œë‹¤.
 	private ArrayList<String> alName;
 	private ArrayList<Integer> alPrice;
 	
-	//µ¥ÀÌÅÍ Å¸ÀÔÀ» Á¤ÇØ°í ÇÊµå¸¦ ÃÊ±âÈ­ ÇØÁà¾ß ÇÑ´Ù.
+	//ë°ì´í„° íƒ€ì…ì„ ì •í•´ê³  í•„ë“œë¥¼ ì´ˆê¸°í™” í•´ì¤˜ì•¼ í•œë‹¤.
 	public void init() {
 		this.alName = new ArrayList<String>();
 		this.alPrice = new ArrayList<Integer>();
 	}
-	//»ı¼ºÀÚ - ÁÖ·Î ÃÊ±âÈ­ ÀÛ¾÷¿ëÀÇ ¸Ş¼Òµå. ÀÌ¸§ÀÌ Å¬·¡½º¿Í °°¾Æ¾ßÇÑ´Ù. ¹İÈ¯°ªÀÌ ¾ø´Ù(¹İÈ¯ÇÒ ¼ö ¾ø°í ÀÛ¾÷¸¸ ½ÇÇà).
-	Menu() { //new¿¬»êÀÚ°¡ ½ÇÇàµÈ Á÷ÈÄ¿¡ ÀÚµ¿½ÇÇà/È£ÃâÀÌ µÈ´Ù.
+	//ìƒì„±ì - ì£¼ë¡œ ì´ˆê¸°í™” ì‘ì—…ìš©ì˜ ë©”ì†Œë“œ. ì´ë¦„ì´ í´ë˜ìŠ¤ì™€ ê°™ì•„ì•¼í•œë‹¤. ë°˜í™˜ê°’ì´ ì—†ë‹¤(ë°˜í™˜í•  ìˆ˜ ì—†ê³  ì‘ì—…ë§Œ ì‹¤í–‰).
+	Menu() { //newì—°ì‚°ìê°€ ì‹¤í–‰ëœ ì§í›„ì— ìë™ì‹¤í–‰/í˜¸ì¶œì´ ëœë‹¤.
 		this.alName = new ArrayList<String>();
 		this.alPrice = new ArrayList<Integer>();
 	}

@@ -5,41 +5,41 @@ import java.util.ArrayList;
 public class ArrayListPr {
 
 	public static void main(String[] args) {
-		//Array¿Í ¸Ş¸ğ¸®±¸Á¶¸¸ ´Ù¸¥ ArrayList
-		//±æÀÌ¸¦ ¸ğ¸¦ ¶§ ¸Ş¸ğ¸®ÀÇ ³¶ºñ³ª ºÎÁ·ÇÔ ¾øÀÌ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
-		//±æÀÌ¸¦ ¼±¾ğÇÏÁö ¾Ê°í Ãß°¡ÇÏ°Å³ª »èÁ¦·Î ÁÙÀÏ ¼ö ÀÖ±â ¶§¹®.
-		//CRUD(Create/Read/Update/Delete)
+		//Arrayì™€ ë©”ëª¨ë¦¬êµ¬ì¡°ë§Œ ë‹¤ë¥¸ ArrayList
+		//ê¸¸ì´ë¥¼ ëª¨ë¥¼ ë•Œ ë©”ëª¨ë¦¬ì˜ ë‚­ë¹„ë‚˜ ë¶€ì¡±í•¨ ì—†ì´ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
+		//ê¸¸ì´ë¥¼ ì„ ì–¸í•˜ì§€ ì•Šê³  ì¶”ê°€í•˜ê±°ë‚˜ ì‚­ì œë¡œ ì¤„ì¼ ìˆ˜ ìˆê¸° ë•Œë¬¸.
+		//CRUD(Create/Read/Update/Delete) 
 		ArrayList<String> stdtName = new ArrayList<String>();
-		// String(¹®ÀÚ), Integer(Á¤¼ö), float(½Ç¼ö)
-		stdtName.add("John"); //ArrayList¿¡ ÀÎµ¦½º Ãß°¡ÇÏ´Â ¹æ¹ı. //»ı¼º
+		// String(ë¬¸ì), Integer(ì •ìˆ˜), float(ì‹¤ìˆ˜)
+		stdtName.add("John"); //ArrayListì— ì¸ë±ìŠ¤ ì¶”ê°€í•˜ëŠ” ë°©ë²•. //ìƒì„±
 		stdtName.add("Jane");
 		stdtName.add("James");
 		stdtName.add("Jacob");
 		stdtName.add("Johanson");
 		stdtName.add("Joshua");
-		System.out.println(stdtName.get(5)); //.get(¹øÈ£);À¸·Î °¡Á®¿Â´Ù.
+		System.out.println(stdtName.get(5)); //.get(ë²ˆí˜¸);ìœ¼ë¡œ ê°€ì ¸ì˜¨ë‹¤.
 		System.out.println();
 		
-		//ArrayList¸¦ for¹®À¸·Î Âï´Â ¹æ¹ı(method) //Á¶È¸
-		for(int i = 0; i < stdtName.size(); i++) { //ArrayListÀÇ ±æÀÌ´Â .size()·Î °¡Á®¿Â´Ù.
+		//ArrayListë¥¼ forë¬¸ìœ¼ë¡œ ì°ëŠ” ë°©ë²•(method) //ì¡°íšŒ
+		for(int i = 0; i < stdtName.size(); i++) { //ArrayListì˜ ê¸¸ì´ëŠ” .size()ë¡œ ê°€ì ¸ì˜¨ë‹¤.
 			System.out.println(stdtName.get(i));
 		}
 		System.out.println();
 		
-		//ArrayListÀÇ ³»¿ëÀ» ¼öÁ¤ÇÏ´Â ¹æ¹ı //¼öÁ¤
-		stdtName.set(3, "Jason"); //stdtNameÀÇ ÀÎµ¦½º3¹ø ÀÚ¸®¸¦ "Jason"À¸·Î ¹Ù²Û´Ù.
+		//ArrayListì˜ ë‚´ìš©ì„ ìˆ˜ì •í•˜ëŠ” ë°©ë²• //ìˆ˜ì •
+		stdtName.set(3, "Jason"); //stdtNameì˜ ì¸ë±ìŠ¤3ë²ˆ ìë¦¬ë¥¼ "Jason"ìœ¼ë¡œ ë°”ê¾¼ë‹¤.
 		
-		for(int i = 0; i < stdtName.size(); i++) { //ArrayListÀÇ ±æÀÌ´Â .size()·Î °¡Á®¿Â´Ù.
+		for(int i = 0; i < stdtName.size(); i++) { //ArrayListì˜ ê¸¸ì´ëŠ” .size()ë¡œ ê°€ì ¸ì˜¨ë‹¤.
 			System.out.println(stdtName.get(i));
 		}
 		System.out.println();
 		
-		//ArrayListÀÇ ³»¿ë »èÁ¦ÇÏ´Â ¹æ¹ı // »èÁ¦
+		//ArrayListì˜ ë‚´ìš© ì‚­ì œí•˜ëŠ” ë°©ë²• // ì‚­ì œ
 		stdtName.remove(3); // by index
 		stdtName.remove("Jason"); // by value
-		// delete data and reduce the length(±æÀÌµµ º¯ÇÑ´Ù.)
+		// delete data and reduce the length(ê¸¸ì´ë„ ë³€í•œë‹¤.)
 		stdtName.clear(); //delete all
-		//±æÀÌ°¡ 0ÀÎ ArrayList°¡ µÈ´Ù.
+		//ê¸¸ì´ê°€ 0ì¸ ArrayListê°€ ëœë‹¤.
 
 	}
 
