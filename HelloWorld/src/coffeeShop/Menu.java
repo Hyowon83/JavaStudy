@@ -2,9 +2,11 @@ package coffeeShop;
 
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -42,12 +44,35 @@ public class Menu { // 선언(정의) only. not 실행코드
 	void addPrice(String price) {
 		this.alPrice.add(Integer.parseInt(price));
 	}
+	void ChangeMenu(int menu_num, String new_name, int new_price) {
+		this.alName.set(menu_num - 1, new_name);
+		this.alPrice.set(menu_num - 1, new_price);
+	}
+	void DeleteMenu(int menu_num) {
+		this.alName.remove(menu_num - 1);
+		this.alPrice.remove(menu_num - 1);
+	}
 	void showMenu() {
 		for(int i=0;i<this.alName.size();i++) {
-			System.out.println(this.alName.get(i)+"\t"+this.alPrice.get(i));
+			System.out.printf("%d %s \t %d\n", (i+1), this.alName.get(i) ,this.alPrice.get(i));
 		}
 	}
 	void save() { //arrayList alName, alPrice를 화일(menu.txt)에 저장
+		File file = new File("d:/menu.txt");
+		BufferedWriter bw;
+		try {
+			bw = new BufferedWriter(new FileWriter(file));
+			for(int i = 0; i < this.alName.size(); i++) {
+				String name = this.alName.get(i);
+				int price = this.alPrice.get(i);
+				bw.write(name + "," + price + "\r\n");
+			}
+			bw.flush();
+			bw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	void load() { //화일(menu.txt)을 읽어서 arrayList alName, alPrice에 로드.
