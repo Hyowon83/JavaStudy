@@ -32,46 +32,17 @@ public class CoffeeShop {
 				while(!b.equals("q")) {
 					switch(b) {
 					case "c" :
-						System.out.println("새 메뉴 추가");
-						System.out.print("추가할 메뉴명 : ");
-						String c_name = s.nextLine(); //새 메뉴명 읽기
-						if(c_name.equals("")) {
-							break;
-						}
-						menu.addName(c_name); //메뉴명 추가
-						System.out.print("추가할 메뉴가격 : ");
-						int c_price = s.nextInt(); //새 가격 읽기
-						s.nextLine();
-						menu.addPrice(c_price); //가격 추가
+						menu.appendMenu();
 						break;
 					case "r" :
 						System.out.println("목록보기");
 						menu.showMenu();
 						break;
 					case "u" :
-						System.out.println("기존메뉴 수정");
-						System.out.print("수정할 메뉴 번호 : ");
-						int u_num = s.nextInt(); //수정할 메뉴번호 읽기
-						s.nextLine();
-						if(u_num == 0) {
-							break;
-						}
-						System.out.print("수정할 메뉴명 : ");
-						String u_name = s.nextLine(); //수정된 메뉴명 읽기
-						System.out.print("수정할 메뉴가격 : ");
-						int u_price = s.nextInt(); //수정된 가격 읽기
-						s.nextLine();
-						menu.ChangeMenu(u_num, u_name, u_price); //메뉴번호에 해당하는 메뉴명과 가격 수정하기
+						menu.changeMenu();
 						break;
 					case "d" :
-						System.out.println("기존메뉴 삭제");
-						System.out.print("삭제할 메뉴 번호 : ");
-						int d_num = s.nextInt(); //삭제할 메뉴번호 읽기
-						s.nextLine();
-						if(d_num == 0) {
-							break;
-						}
-						menu.DeleteMenu(d_num); //메뉴 삭제하기
+						menu.deleteMenu();
 						break;
 					}
 					menu.save();
@@ -102,7 +73,37 @@ public class CoffeeShop {
 				System.out.println("메뉴작업 종료");
 				
 			} else if(a.equals("o")) {
-				System.out.println("주문");
+				
+				Order order = new Order();
+				menu.showMenu();
+				System.out.print("번호 뒷자리를 입력하세요. : ");//"모바일 번호를 입력하세요" 출력
+				String mobile = s.nextLine(); //주문고객의 모바일 번호 입력 받음.
+				System.out.print("메뉴 번호를 입력해주세요. : ");// "메뉴번호 입력" 출력
+				String o_num = s.nextLine();
+				while(!o_num.equals("")) { // 메뉴번호가 ""이 아닌동안 값을 받는다.
+					order.addMobile(mobile);
+					menu.getName(o_num);
+					menu.getPrice(o_num);
+					System.out.print("수량을 입력해주세요. : ");//출력 "수량을 입력하세요"
+					int o_cnt = s.nextInt();
+					System.out.println();
+					s.nextLine();
+					
+					System.out.printf("모바일번호 : %s\n", mobile);
+					order.addOrder(menu.getName(o_num), menu.getPrice(o_num), o_cnt);
+					
+					menu.showMenu();
+					System.out.print("메뉴 번호를 입력해주세요. : ");
+					o_num = s.nextLine();
+				}
+				System.out.println("주문이 종료되었습니다.");
+				System.out.println();
+				
+				order.totalMenu();
+				System.out.println("모든 주문메뉴의 총액 : " + order.getTotalSum()); // 각 메뉴의 총액을 더한 전체 총액을 출력
+				System.out.println();
+				
+				// 실적에 추가한다(나중에)
 			} else if(a.equals("s")) {
 				System.out.println("실적조회");
 			} else {
