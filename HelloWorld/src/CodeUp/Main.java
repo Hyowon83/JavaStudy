@@ -5,28 +5,26 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		 Scanner sc=new Scanner(System.in);
-	     String money = sc.nextLine();
-	     int a = Integer.parseInt(money.split(" ")[0]);
-	     int b = Integer.parseInt(money.split(" ")[1]);
-	     int c = Integer.parseInt(money.split(" ")[2]);
-	     
-	     if(c <= b) {
-	    	 System.out.println(-1);
-	     } else {	    	 
-	    	 System.out.println((a / (c-b)) + 1);
-	     }
-	     
-//	     if(b < c) {
-//	    	 
-//	    	 int i = 1;
-//	    	 for(i = 1; (c * i) <= a + (b * i); i++);
-//	    	 System.out.println(i);
-//	    	 
-//	     } else {
-//	    	 System.out.println(-1);
-//	     }
-	     
-	     sc.close();
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		
+		for(int i = 1; i <= n; i++) {
+			for(int j = 1; j <= i; j++) {
+				System.out.printf("*");
+			}
+			System.out.println();
+		}
+		
+		sc.close();
+		
+		
+		
+//		// 백의자리 십의자리 일의자리 구하기
+//		int a = 653;
+//		System.out.printf("백의자리 : %d\n",a/100);
+//		System.out.printf("십의자리 : %d\n",(a%100)/10);
+//		System.out.printf("일의자리 : %d\n",a%10);
 	}
 }
