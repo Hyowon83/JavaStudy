@@ -23,6 +23,15 @@ public class Main {
 		
 		sc.close();
 		
+		for(int i=0;i<4;i++){
+			for(int j=0;j<3-i;j++){
+				System.out.print(" "); 
+			}
+			for(int j=0;j<2*i+1;j++){
+				System.out.print("*"); 
+			}
+			System.out.println("");
+		}
 		
 		
 //		// 백의자리 십의자리 일의자리 구하기
