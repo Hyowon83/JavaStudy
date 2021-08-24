@@ -21,7 +21,7 @@ public class CoffeeShop {
 				s.close();
 				return;
 			} else if(a.equals("m")) {
-				
+				System.out.println("메뉴관리가 제대로 뜬다.");
 				System.out.println("메뉴관리");
 				menu.showMenu();
 				System.out.println();
@@ -32,6 +32,7 @@ public class CoffeeShop {
 				while(!b.equals("q")) {
 					switch(b) {
 					case "c" :
+						System.out.println("스위치 코드 잘 짜여졌나?");
 						menu.appendMenu();
 						break;
 					case "r" :
